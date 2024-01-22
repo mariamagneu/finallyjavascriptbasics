@@ -2,7 +2,7 @@
 <html lang="en-US">
   <head>
     <meta charset="utf-8"/>
-    <title>Math: Task 1</title>
+    <title>Math: Task 3</title>
     <style>
       p {
         color: purple;
@@ -26,34 +26,46 @@
 
   </body>
   <script>
-    let finalResult;
+    // Statement 1: The elephant weighs less than the mouse
+    const eleWeight = 1000;
+    const mouseWeight = 2;
 
-    let evenOddResult;
+    // Statement 2: The Ostrich is taller than the duck
+    const ostrichHeight = 2;
+    const duckHeight = 0.3;
+
+    // Statement 3: The two passwords match
+    const pwd1 = 'stromboli';
+    const pwd2 = 'stROmBoLi';
 
     // Add your code here
-let num1 = 41;
-let num2 = 7;
-let num3 =2;
-let num4 = 1;
+    let weightComparison;
+weightComparison = !(eleWeight <= 1000);
 
-let num5 = num1 + num2;
-let num6 = num3 - num4;
-finalResult = num5 * num6;
+let heightComparison;
+heightComparison = ostrichHeight > duckHeight;
 
+let pwdMatch;
+pwdMatch = pwd1 == pwd2;
 
     // Don't edit the code below here!
 
     const section = document.querySelector('section');
 
     const para1 = document.createElement('p');
-    const finalResultCheck = finalResult === 48 ? `Yes, well done!` : `No, it is ${ finalResult }`;
-    para1.textContent = `Is the finalResult 48? ${ finalResultCheck }`;
     const para2 = document.createElement('p');
-    const evenOddResultCheck = evenOddResult === 0 ? 'The final result is even!' : 'The final result is odd. Hrm.';
-    para2.textContent = evenOddResultCheck;
+    const para3 = document.createElement('p');
 
+    const weightTest = weightComparison ? 'True — elephants do weigh less than mice!?' : 'False — of course an elephant is heavier than a mouse!';
+    const heightTest = heightComparison ? 'True — an ostrich is indeed taller than a duck!' : 'False — apparently a duck is taller than an ostrich!?';
+    const pwdTest = pwdMatch ? 'True — the passwords match.' : 'False — the passwords do not match; please check them';
+
+    para1.textContent = weightTest;
     section.appendChild(para1);
+    para2.textContent = heightTest;
     section.appendChild(para2);
+    para3.textContent = pwdTest;
+    section.appendChild(para3);
   </script>
 
 </html>
