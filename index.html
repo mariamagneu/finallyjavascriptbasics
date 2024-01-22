@@ -1,21 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <p> learning about Numbers, operators and operator precendence</p>
-    <script>
-    const num1 = 10;
-    const num2 = 50;
-    const ergebnis = num2 + num1 / 8 + 2;
-    console.log(ergebnis)
-    const ergebnis2 = (num2 + num1) / (8 + 2);
-    console.log(ergebnis2)
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Math: Task 1</title>
+    <style>
+      p {
+        color: purple;
+        margin: 0.5em 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+    </style>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+
+  <body>
+
+    <section class="preview">
 
 
-    </script>
-</body>
+
+    </section>
+
+  </body>
+  <script>
+    let finalResult;
+
+    let evenOddResult;
+
+    // Add your code here
+let num1 = 41;
+let num2 = 7;
+let num3 =2;
+let num4 = 1;
+
+let num5 = num1 + num2;
+let num6 = num3 - num4;
+finalResult = num5 * num6;
+
+
+    // Don't edit the code below here!
+
+    const section = document.querySelector('section');
+
+    const para1 = document.createElement('p');
+    const finalResultCheck = finalResult === 48 ? `Yes, well done!` : `No, it is ${ finalResult }`;
+    para1.textContent = `Is the finalResult 48? ${ finalResultCheck }`;
+    const para2 = document.createElement('p');
+    const evenOddResultCheck = evenOddResult === 0 ? 'The final result is even!' : 'The final result is odd. Hrm.';
+    para2.textContent = evenOddResultCheck;
+
+    section.appendChild(para1);
+    section.appendChild(para2);
+  </script>
+
 </html>
