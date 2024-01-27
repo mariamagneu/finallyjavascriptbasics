@@ -1,6 +1,7 @@
 body {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     margin: 0;
+    height: 100vh;
 }
 
 .header {
@@ -23,6 +24,7 @@ button{
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    margin: 5px;
   }
 
   .bodysection {
@@ -35,4 +37,16 @@ button{
 
   #greeting {
     margin: 30px 0 30px 0;
+  }
+
+  .footer {
+    background-color: #eeeeee;
+    margin: 0px auto 0px 0px;
+
+  }
+  
+  .footerlinks {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
   }
