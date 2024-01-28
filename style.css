@@ -1,7 +1,10 @@
 body {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     margin: 0;
+    display: flex;
+    flex-direction: column;
     height: 100vh;
+
 }
 
 .header {
@@ -41,12 +44,19 @@ button{
 
   .footer {
     background-color: #eeeeee;
-    margin: 0px auto 0px 0px;
-
+    display: flex;
+    margin-top: auto;
   }
   
   .footerlinks {
     display: flex;
-    justify-content: space-between;
     padding: 20px;
+  }
+
+  .fill {
+    margin: 100px;
+    padding: 50px;
+    border: 100px green dotted;
+    display: flex;
+    text-align: center;
   }
