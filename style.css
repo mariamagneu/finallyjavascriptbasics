@@ -58,6 +58,10 @@ button {
 justify-content: space-between;
   }
   
+  .footerlinks a{
+    text-decoration: none;
+    color: #333333
+  }
   .fill {
     margin: 100px;
     padding: 50px;
