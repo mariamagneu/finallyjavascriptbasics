@@ -68,8 +68,18 @@ justify-content: space-between;
     border: 100px green dotted;
     display: flex;
     justify-content: center;
+    gap: 10px;
   }
 
+  .weatherjs {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+  }
+
+  .label {
+    margin: 20px;
+  }
   .text {
     text-align: center;
   }
