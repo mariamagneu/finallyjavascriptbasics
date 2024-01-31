@@ -60,7 +60,7 @@ justify-content: space-between;
   
   .footerlinks a{
     text-decoration: none;
-    color: #333333
+    color: #333333;
   }
   .fill {
     margin: 100px;
@@ -82,4 +82,8 @@ justify-content: space-between;
   }
   .text {
     text-align: center;
+  }
+
+  .weatherclass {
+    margin: 10px 30px 10px 30px
   }
