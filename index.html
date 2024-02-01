@@ -27,6 +27,7 @@
             <option value="snowing">Snowing</option>
             <option value="overcast">Overcast</option>
         </select>
+        <p class="weathertext"></p>
 </div>
 <p></p>
     <div class="fill">
@@ -53,7 +54,7 @@ function greet() {
 button.addEventListener("click", greet);
 
 const select = document.querySelector("select");
-const para = document.querySelector("p");
+const para = document.querySelector(".weathertext");
 
 select.addEventListener("change", setWeather);
 
