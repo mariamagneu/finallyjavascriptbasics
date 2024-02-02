@@ -20,7 +20,7 @@
     </div>
     <div class="weatherjs">
         <label class= "weatherclass" for="weather">Select the weather type today: </label>
-        <select class= "weatherselect weatherclass weather">
+        <select class= "weatherclass weather">
             <option class= "liveordiemakeyourchoice" value="">--Make a choice--</option>
             <option value="sunny">Sunny</option>
             <option value="rainy">Rainy</option>
@@ -59,13 +59,13 @@ function greet() {
 
 button.addEventListener("click", greet);
 
-const weatherselect = document.querySelector(".weatherselect");
+const weatherSelect = document.querySelector(".weatherjs select.weather");
 const para = document.querySelector(".weathertext");
 
-select.addEventListener("change", setWeather);
+weatherSelect.addEventListener("change", setWeather);
 
 function setWeather() {
-  const choice = select.value;
+  const choice = weatherSelect.value;
 
   if (choice === "sunny") {
     para.textContent =
@@ -84,7 +84,7 @@ function setWeather() {
   }
 }
 
-const select = document.querySelector("select");
+const themeSelect = document.querySelector(".themeselector select");
 const html = document.querySelector("html");
 document.body.style.padding = "10px";
 
@@ -93,8 +93,8 @@ function update(bgColor, textColor) {
   html.style.color = textColor;
 }
 
-select.addEventListener("change", () =>
-  select.value === "black"
+themeSelect.addEventListener("change", () =>
+  themeSelect.value === "black"
     ? update("black", "white")
     : update("white", "black"),
 );
