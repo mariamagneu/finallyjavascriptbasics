@@ -31,7 +31,6 @@ button {
   }
 
   .bodysection {
-    background-color: white;
     margin: 40px;
     display: flex;
     align-items: center;
@@ -76,7 +75,6 @@ justify-content: space-between;
     justify-content: center;
     padding: 20px;
     flex-direction: column;
-    margin: 20px 150px 20px 150px;
   }
 
   select {
