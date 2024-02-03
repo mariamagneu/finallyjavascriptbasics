@@ -1,13 +1,11 @@
 
-
 body {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    height: 100vh;
     display: flex;
     flex-direction: column;
     gap: 2em;
-    align-items: center;
     justify-content: center;
+    margin: 0px;
 }
 
 .header {
@@ -103,4 +101,10 @@ justify-content: space-between;
     justify-content: center;
     border: 1px solid #ccc; /* optional: just to see the container */
     padding: 20px; /* optional: add padding for space inside the container */
+}
+
+.contents {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
