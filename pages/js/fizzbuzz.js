@@ -1,12 +1,20 @@
+document.addEventListener("DOMContentLoaded", function() {
+const outputParagraph = document.getElementById('output');
+
 let answer = parseInt(prompt("Please enter the number you would like to FizzBuzz up to: "));
+let outputContent = "";
 for (let i = 1; i <= answer; i++) {
 if (i % 15 === 0) {
-    console.log("FizzBuzz");
+    outputContent += "FizzBuzz ";
 }else if (i % 5 === 0){
-    console.log("Buzz");
+    outputContent += "Buzz ";
 } else if (i % 3 === 0) {
-    console.log("Fizz")
+    outputContent += "Fizz ";
 } else {
-    console.log(i)
-    }
+    outputContent += i +" ";
 }
+}
+
+outputParagraph.innerHTML = outputContent;
+
+});

@@ -2,3 +2,20 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 30px;
 }
+
+.container {
+    width: 100%; /* Occupy full width of the viewport */
+    height: 100%; /* Occupy full height of the viewport */
+    overflow: auto; /* Enable scrolling if content exceeds viewport height */
+}
+
+.fizzbuzz {
+    margin: auto; /* Center the fizzbuzz section horizontally */
+    max-width: 80%; /* Limit the maximum width of the fizzbuzz section */
+    padding: 20px; /* Add padding for spacing */
+}
+
+#output {
+    white-space: pre-line;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
