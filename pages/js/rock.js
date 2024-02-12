@@ -1,21 +1,22 @@
-function getComputerChoice () {
+console.log("Hello World");
+
+function getComputerChoice() {
     const choices = ['Rock', 'Paper', 'Scissors'];
     const randomIndex = Math.floor(Math.random() * choices.length);
-    return  choices[randomIndex];
+    return choices[randomIndex];
 }
 
-console.log(getComputerChoice());
-
-function playRound (playerSelection, computerSelection) {
+function playRound(playerSelection) {
     playerSelection = playerSelection.toLowerCase();
+    const computerSelection = getComputerChoice();
     const winningCombos = {
         'rock': 'scissors',
         'paper': 'rock',
         'scissors': 'paper'
     };
-    if (playerSelection === computerSelection) {
+    if (playerSelection === computerSelection.toLowerCase()) {
         return "It's a tie!";
-    } else if (winningCombos[playerSelection] === computerSelection) {
+    } else if (winningCombos[playerSelection] === computerSelection.toLowerCase()) {
         return "You won!";
     } else { 
         return "You lose!";
@@ -23,5 +24,4 @@ function playRound (playerSelection, computerSelection) {
 }
 
 const playerSelection = 'Rock';
-const computerSelection = 'getComputerChoice';
-console.log(playRound(playerSelection, computerSelection));
+console.log(playRound(playerSelection));
