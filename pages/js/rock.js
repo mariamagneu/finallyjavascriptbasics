@@ -9,6 +9,8 @@ console.log results of each round and the winner at the end.*/
 
 let choices = ["rock", "paper", "scissors"];
 let randomIndex;
+let userChoice = prompt("What do you choose? Rock, Paper, or Scissors?").toLowerCase();
+
 
 function getComputerChoice() {
     randomIndex = Math.floor(Math.random() * choices.length);
@@ -17,7 +19,17 @@ function getComputerChoice() {
 
 console.log(getComputerChoice());
 
-let userChoice = prompt("What do you choose? Rock, Paper, or Scissors?").toLowerCase();
+function getUserChoice() {
+    if (userChoice === "rock" || userChoice === "paper" || userChoice === "scissors") {
+        return userChoice;
+    } else {
+        return prompt("You entered an invalid answer. Please choose between Rock, Paper and Scissors");
+    }
+}
+console.log(getUserChoice());
 
-console.log(userChoice);
-
+function playRound () {
+    let playerSelection = userChoice;
+    let computerSelection = getComputerChoice();
+    if (playerSelection === computerSelection) {
+        return "It's a tie. Nobody wins"; }}
