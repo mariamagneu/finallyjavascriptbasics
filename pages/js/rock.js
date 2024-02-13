@@ -10,6 +10,11 @@ console.log results of each round and the winner at the end.*/
 let choices = ["rock", "paper", "scissors"];
 let randomIndex;
 let userChoice = prompt("What do you choose? Rock, Paper, or Scissors?").toLowerCase();
+const winningCombos = {
+    'rock': 'scissors',
+    'paper': 'rock',
+    'scissors': 'paper',
+}
 
 
 function getComputerChoice() {
@@ -32,4 +37,13 @@ function playRound () {
     let playerSelection = userChoice;
     let computerSelection = getComputerChoice();
     if (playerSelection === computerSelection) {
-        return "It's a tie. Nobody wins"; }}
+        return "It's a tie. Nobody wins"; 
+    } else if (winningCombos[playerSelection] === computerSelection) {
+        return "You won!!!";
+    } else {
+        return "You lost! :(";
+    }
+
+    }
+
+playRound();
