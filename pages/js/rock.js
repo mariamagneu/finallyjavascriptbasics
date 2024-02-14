@@ -16,7 +16,6 @@ const winningCombos = {
     'scissors': 'paper',
 }
 
-
 function getComputerChoice() {
     randomIndex = Math.floor(Math.random() * choices.length);
     return choices[randomIndex];
@@ -31,10 +30,10 @@ function getUserChoice() {
         return prompt("You entered an invalid answer. Please choose between Rock, Paper and Scissors");
     }
 }
+
 console.log(getUserChoice());
 
-function playRound () {
-    let playerSelection = userChoice;
+function playRound(playerSelection) {
     let computerSelection = getComputerChoice();
     if (playerSelection === computerSelection) {
         return "It's a tie. Nobody wins"; 
@@ -43,7 +42,6 @@ function playRound () {
     } else {
         return "You lost! :(";
     }
+}
 
-    }
-
-playRound();
+console.log(playRound(userChoice));
