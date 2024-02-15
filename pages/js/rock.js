@@ -9,7 +9,6 @@ console.log results of each round and the winner at the end.*/
 
 let choices = ["rock", "paper", "scissors"];
 let randomIndex;
-let userChoice = prompt("What do you choose? Rock, Paper, or Scissors?").toLowerCase();
 const winningCombos = {
     'rock': 'scissors',
     'paper': 'rock',
@@ -21,20 +20,24 @@ function getComputerChoice() {
     return choices[randomIndex];
 }
 
-console.log(getComputerChoice());
 
 function getUserChoice() {
-    if (userChoice === "rock" || userChoice === "paper" || userChoice === "scissors") {
-        return userChoice;
-    } else {
-        return prompt("You entered an invalid answer. Please choose between Rock, Paper and Scissors");
+    let userChoice = prompt("What do you choose? Rock, Paper, or Scissors?").toLowerCase();
+    while (!choices.includes(userChoice)) {
+        userChoice = prompt("You entered an invalid answer. Please choose between Rock, Paper, and Scissors").toLowerCase();
     }
+    return userChoice;
 }
 
-console.log(getUserChoice());
+let computerSelection = getComputerChoice(); 
+let playerSelection = getUserChoice();
+console.log("this is the computers selection:")
+console.log(computerSelection);
+console.log("this is your selection")
+console.log(playerSelection);
 
-function playRound(playerSelection) {
-    let computerSelection = getComputerChoice();
+
+function playRound(playerSelection, computerSelection) {
     if (playerSelection === computerSelection) {
         return "It's a tie. Nobody wins"; 
     } else if (winningCombos[playerSelection] === computerSelection) {
@@ -44,4 +47,17 @@ function playRound(playerSelection) {
     }
 }
 
-console.log(playRound(userChoice));
+function playGame() {
+console.log("round1")
+console.log(playRound(playerSelection, computerSelection));
+console.log("round2")
+console.log(playRound(playerSelection, computerSelection));
+console.log("round3")
+console.log(playRound(playerSelection, computerSelection));
+console.log("round4")
+console.log(playRound(playerSelection, computerSelection));
+console.log("round5")
+console.log(playRound(playerSelection, computerSelection));
+}
+
+console.log(playGame())
