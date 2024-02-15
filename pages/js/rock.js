@@ -49,7 +49,7 @@ function playGame() {
     console.log(playRound(playerSelection, computerSelection));
     if (result === "You won!!!") {
         userWins++;
-    } else if (result === "Computer won! :(") {
+    } else if (result === "You lost! :(") {
         computerWins++;
     }
     console.log("Round 2:");
@@ -61,7 +61,7 @@ function playGame() {
     console.log(playRound(playerSelection, computerSelection));
     if (result === "You won!!!") {
         userWins++;
-    } else if (result === "Computer won! :(") {
+    } else if (result === "You lost! :(") {
         computerWins++;
     }
     console.log("Round 3:");
@@ -73,7 +73,7 @@ function playGame() {
     console.log(playRound(playerSelection, computerSelection));
     if (result === "You won!!!") {
         userWins++;
-    } else if (result === "Computer won! :(") {
+    } else if (result === "You lost! :(") {
         computerWins++;
     }
     console.log("Round 4:");
@@ -85,7 +85,7 @@ function playGame() {
     console.log(playRound(playerSelection, computerSelection));
     if (result === "You won!!!") {
         userWins++;
-    } else if (result === "Computer won! :(") {
+    } else if (result === "You lost! :(") {
         computerWins++;
     }
     console.log("Round 5:");
@@ -97,11 +97,20 @@ function playGame() {
     console.log(playRound(playerSelection, computerSelection));
     if (result === "You won!!!") {
         userWins++;
-    } else if (result === "Computer won! :(") {
+    } else if (result === "You lost! :(") {
         computerWins++;
     }
 }
 
 playGame();
+
+if (userWins === computerWins) {
+    console.log("It's a tie.")
+} else if (userWins > computerWins) {
+    console.log("YOU MADE IT! YOU WON THE WHOLE GAME")
+} else {
+    console.log("Try again. I believe in you!")
+}
+
 console.log (userWins)
 console.log (computerWins)
