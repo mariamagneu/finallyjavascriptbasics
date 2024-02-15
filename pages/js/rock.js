@@ -15,49 +15,62 @@ const winningCombos = {
     'scissors': 'paper',
 }
 
-function getComputerChoice() {
-    randomIndex = Math.floor(Math.random() * choices.length);
-    return choices[randomIndex];
-}
-
-
-function getUserChoice() {
-    let userChoice = prompt("What do you choose? Rock, Paper, or Scissors?").toLowerCase();
-    while (!choices.includes(userChoice)) {
-        userChoice = prompt("You entered an invalid answer. Please choose between Rock, Paper, and Scissors").toLowerCase();
-    }
-    return userChoice;
-}
-
-let computerSelection = getComputerChoice(); 
-let playerSelection = getUserChoice();
-console.log("this is the computers selection:")
-console.log(computerSelection);
-console.log("this is your selection")
-console.log(playerSelection);
-
-
-function playRound(playerSelection, computerSelection) {
-    if (playerSelection === computerSelection) {
-        return "It's a tie. Nobody wins"; 
-    } else if (winningCombos[playerSelection] === computerSelection) {
-        return "You won!!!";
-    } else {
-        return "You lost! :(";
-    }
-}
-
 function playGame() {
-console.log("round1")
-console.log(playRound(playerSelection, computerSelection));
-console.log("round2")
-console.log(playRound(playerSelection, computerSelection));
-console.log("round3")
-console.log(playRound(playerSelection, computerSelection));
-console.log("round4")
-console.log(playRound(playerSelection, computerSelection));
-console.log("round5")
-console.log(playRound(playerSelection, computerSelection));
+    function getComputerChoice() {
+        randomIndex = Math.floor(Math.random() * choices.length);
+        return choices[randomIndex];
+    }
+    function getUserChoice() {
+        let userChoice = prompt("What do you choose? Rock, Paper, or Scissors?").toLowerCase();
+        while (!choices.includes(userChoice)) {
+            userChoice = prompt("You entered an invalid answer. Please choose between Rock, Paper, and Scissors").toLowerCase();
+        }
+        return userChoice;
+    }
+    function playRound(playerSelection, computerSelection) {
+        if (playerSelection === computerSelection) {
+            return "It's a tie. Nobody wins"; 
+        } else if (winningCombos[playerSelection] === computerSelection) {
+            return "You won!!!";
+        } else {
+            return "You lost! :(";
+        }
+    }
+    
+    console.log("Round 1:");
+    let playerSelection = getUserChoice();
+    let computerSelection = getComputerChoice();
+    console.log("Computer chose: " + computerSelection);
+    console.log("You chose: " + playerSelection);
+    console.log(playRound(playerSelection, computerSelection));
+
+    console.log("Round 2:");
+    playerSelection = getUserChoice();
+    computerSelection = getComputerChoice();
+    console.log("Computer chose: " + computerSelection);
+    console.log("You chose: " + playerSelection);
+    console.log(playRound(playerSelection, computerSelection));
+
+    console.log("Round 3:");
+    playerSelection = getUserChoice();
+    computerSelection = getComputerChoice();
+    console.log("Computer chose: " + computerSelection);
+    console.log("You chose: " + playerSelection);
+    console.log(playRound(playerSelection, computerSelection));
+
+    console.log("Round 4:");
+    playerSelection = getUserChoice();
+    computerSelection = getComputerChoice();
+    console.log("Computer chose: " + computerSelection);
+    console.log("You chose: " + playerSelection);
+    console.log(playRound(playerSelection, computerSelection));
+
+    console.log("Round 5:");
+    playerSelection = getUserChoice();
+    computerSelection = getComputerChoice();
+    console.log("Computer chose: " + computerSelection);
+    console.log("You chose: " + playerSelection);
+    console.log(playRound(playerSelection, computerSelection));
 }
 
-console.log(playGame())
+playGame();
