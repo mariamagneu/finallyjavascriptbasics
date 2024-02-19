@@ -1,18 +1,15 @@
 document.addEventListener('DOMContentLoaded', function() {
 
+    const myArray = ['tomatoes', 'chick peas', 'onions', 'rice', 'black beans'];
+    const list = document.createElement('ul');
 
-const people = ['Chris', 'Anne', 'Colin', 'Terri', 'Phil', 'Lola', 'Sam', 'Kay', 'Bruce'];
+    // Add your code here
+    for (const listElement of myArray) {
+        list.innerHTML += `<li>${listElement}</li>`;
+    }
+    // Don't edit the code below here!
 
-const admitted = document.querySelector('.admitted');
-const refused = document.querySelector('.refused');
-admitted.textContent = 'Admit: ';
-refused.textContent = 'Refuse: ';
+    const section = document.querySelector('section');
+    section.appendChild(list);
 
-for (const decision of people) {
-	if (decision === "Phil" || decision === "Lola") {
-	refused.textContent += ` ${decision}, `;
-	} else { 
-	admitted.textContent +=` ${decision}, `;
-	}
-}
 });
