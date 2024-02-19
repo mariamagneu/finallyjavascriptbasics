@@ -1,15 +1,32 @@
 document.addEventListener('DOMContentLoaded', function() {
 
-    const myArray = ['tomatoes', 'chick peas', 'onions', 'rice', 'black beans'];
-    const list = document.createElement('ul');
+const name = 'Mustafa';
+const para = document.createElement('p');
 
-    // Add your code here
-    for (const listElement of myArray) {
-        list.innerHTML += `<li>${listElement}</li>`;
+const phonebook = [
+  { name : 'Chris', number : '1549' },
+  { name : 'Li Kang', number : '9634' },
+  { name : 'Anne', number : '9065' },
+  { name : 'Francesca', number : '3001' },
+  { name : 'Mustafa', number : '6888' },
+  { name : 'Tina', number : '4312' },
+  { name : 'Bert', number : '7780' },
+  { name : 'Jada', number : '2282' },
+]
+
+// Add your code here
+let contactsHTML = '';
+for (let i = 0; i < phonebook.length; i++) {
+    const contact = phonebook[i];
+    if (contact.name === name) {
+        contactsHTML += `<p>${contact.name}: ${contact.number}</p>`;
+        para.innerHTML = contactsHTML;
     }
-    // Don't edit the code below here!
+}
+para.innerHTML = contactsHTML;
 
-    const section = document.querySelector('section');
-    section.appendChild(list);
 
+// Don't edit the code below here!
+const section = document.querySelector('section');
+section.appendChild(para);
 });
