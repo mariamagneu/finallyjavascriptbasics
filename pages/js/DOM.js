@@ -13,6 +13,8 @@ container.appendChild(para);
 
 const subtitle = document.createElement('h3');
 subtitle.textContent = 'I\'m a blue h3!';
+subtitle.style.color = 'blue';
+container.appendChild(subtitle);
 
 
 //a <p> with red text that says “Hey I’m red!”
