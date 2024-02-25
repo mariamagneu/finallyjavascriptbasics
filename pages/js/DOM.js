@@ -8,7 +8,11 @@ container.appendChild(content);
 
 const para = document.createElement('p');
 para.textContent = 'Hey I\'m red';
+para.style.color = 'red';
 container.appendChild(para);
+
+const subtitle = document.createElement('h3');
+subtitle.textContent = 'I\'m a blue h3!';
 
 
 //a <p> with red text that says “Hey I’m red!”
