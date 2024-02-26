@@ -13,3 +13,8 @@
 .big-pink-button:hover {
   background-color: #ff1493; /* Darker pink color */
 }
+
+.flex-container {
+    display: flex;
+    justify-content: space-around;
+}
