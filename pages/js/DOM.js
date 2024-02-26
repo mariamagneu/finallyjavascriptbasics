@@ -33,8 +33,14 @@ newDiv.appendChild(divText2);
 
 
 const btn = document.querySelector('#btn');
-btn.addE = () => alert("Hello World");
+btn.addEventListener('click', () => {
+    alert("Hello World");
+});
 
+const btn2 = document.querySelector('#btn2');
+btn2.addEventListener('click', () => {
+    alert ("Hello Human")
+});
 
 //a <p> with red text that says “Hey I’m red!”
 //an <h3> with blue text that says “I’m a blue h3!”
