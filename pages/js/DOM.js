@@ -19,6 +19,7 @@ container.appendChild(subtitle);
 const newDiv = document.createElement("div");
 newDiv.style.backgroundColor = 'pink';
 newDiv.style.border = 'solid thin black';
+newDiv.classList.add('container');
 document.body.appendChild(newDiv);
 
 
@@ -32,7 +33,7 @@ newDiv.appendChild(divText2);
 
 
 const btn = document.querySelector('#btn');
-btn.onclick = () => alert("Hello World");
+btn.addE = () => alert("Hello World");
 
 
 //a <p> with red text that says “Hey I’m red!”
