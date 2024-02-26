@@ -31,6 +31,9 @@ divText2.textContent = "Me too!"
 newDiv.appendChild(divText2);
 
 
+const btn = document.querySelector('#btn');
+btn.onclick = () => alert("Hello World");
+
 
 //a <p> with red text that says “Hey I’m red!”
 //an <h3> with blue text that says “I’m a blue h3!”
