@@ -18,7 +18,7 @@ container.appendChild(subtitle);
 
 const newDiv = document.createElement("div");
 newDiv.style.backgroundColor = 'pink';
-newDiv.style.border = 'black';
+newDiv.style.border = 'solid thin black';
 document.body.appendChild(newDiv);
 
 
@@ -27,7 +27,7 @@ divText.textContent = "I\'m in a div";
 newDiv.appendChild(divText);
 
 const divText2 = document.createElement("p");
-divText.textContent = "Me too!"
+divText2.textContent = "Me too!"
 newDiv.appendChild(divText2);
 
 
