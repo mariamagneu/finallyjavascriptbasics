@@ -42,6 +42,15 @@ btn2.addEventListener('click', () => {
     alert ("Hello Human")
 });
 
+function alertFunction() {
+    alert("YAY! YOU DID IT!");
+  }
+  const btn3 = document.querySelector('#btn3')
+
+  btn3.addEventListener('click', alertFunction);
+
+  
+
 //a <p> with red text that says “Hey I’m red!”
 //an <h3> with blue text that says “I’m a blue h3!”
 //a <div> with a black border and pink background color with the
