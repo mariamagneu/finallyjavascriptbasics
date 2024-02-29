@@ -9,11 +9,15 @@ container.appendChild(content);
 const para = document.createElement('p');
 para.textContent = 'Hey I\'m red';
 para.style.color = 'red';
+para.classList.add('content');
+
 container.appendChild(para);
 
 const subtitle = document.createElement('h3');
 subtitle.textContent = 'I\'m a blue h3!';
 subtitle.style.color = 'blue';
+subtitle.classList.add('content');
+
 container.appendChild(subtitle);
 
 const newDiv = document.createElement("div");
@@ -43,15 +47,19 @@ btn2.addEventListener('click', () => {
 });
 
 function alertFunction() {
-    alert("YAY! YOU DID IT!");
-  }
-  const btn3 = document.querySelector('#btn3')
-
+     alert("YAY! YOU DID IT!");
+  };
+  const btn3 = document.querySelector('#btn3');
   btn3.addEventListener('click', alertFunction);
 
-  
 
-//a <p> with red text that says “Hey I’m red!”
+
+
+  btn3.addEventListener('click', function (e) {
+    console.log(e);
+  });
+
+  //a <p> with red text that says “Hey I’m red!”
 //an <h3> with blue text that says “I’m a blue h3!”
 //a <div> with a black border and pink background color with the
 // following elements inside of it:
