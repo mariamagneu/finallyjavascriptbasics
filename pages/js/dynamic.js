@@ -10,3 +10,10 @@ function clickButton() {
 }
 
 clickButton();
+
+const listElement = document.createElement("li");
+const spanElement = document.createElement("span");
+const buttonElement = document.createElement("button");
+
+listElement.appendChild(spanElement);
+listElement.appendChild(buttonElement);
