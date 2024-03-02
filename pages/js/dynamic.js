@@ -13,7 +13,18 @@ clickButton();
 
 const listElement = document.createElement("li");
 const spanElement = document.createElement("span");
-const buttonElement = document.createElement("button");
+const deleteButton = document.createElement("button");
 
 listElement.appendChild(spanElement);
-listElement.appendChild(buttonElement);
+listElement.appendChild(deleteButton);
+
+spanElement.textContent = inputValue;
+deleteButton.textContent = "Delete";
+
+list.appendChild(listElement);
+
+function deleteListElement() {
+    deleteButton.addEventListener("click", function() {
+        listElement.remove();
+    });
+}
