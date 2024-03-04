@@ -17,6 +17,19 @@ const winningCombos = {
 let userWins = 0;
 let computerWins = 0;
 
+
+const rockBtn = document.createElement("button")
+const scissorsBtn = document.createElement("button")
+const paperBtn = document.createElement("button")
+
+
+const newDiv = document.createElement("div");
+newDiv.style.backgroundColor = 'pink';
+newDiv.style.border = 'solid thin black';
+newDiv.classList.add('container');
+document.body.appendChild(newDiv);
+
+
 function playGame() {
     function getComputerChoice() {
         randomIndex = Math.floor(Math.random() * choices.length);
@@ -52,54 +65,7 @@ function playGame() {
     } else if (result === "You lost! :(") {
         computerWins++;
     }
-    console.log("Round 2:");
-    playerSelection = getUserChoice();
-    computerSelection = getComputerChoice();
-    result = playRound(playerSelection, computerSelection);
-    console.log("Computer chose: " + computerSelection);
-    console.log("You chose: " + playerSelection);
-    console.log(playRound(playerSelection, computerSelection));
-    if (result === "You won!!!") {
-        userWins++;
-    } else if (result === "You lost! :(") {
-        computerWins++;
-    }
-    console.log("Round 3:");
-    playerSelection = getUserChoice();
-    computerSelection = getComputerChoice();
-    result = playRound(playerSelection, computerSelection);
-    console.log("Computer chose: " + computerSelection);
-    console.log("You chose: " + playerSelection);
-    console.log(playRound(playerSelection, computerSelection));
-    if (result === "You won!!!") {
-        userWins++;
-    } else if (result === "You lost! :(") {
-        computerWins++;
-    }
-    console.log("Round 4:");
-    playerSelection = getUserChoice();
-    computerSelection = getComputerChoice();
-    result = playRound(playerSelection, computerSelection);
-    console.log("Computer chose: " + computerSelection);
-    console.log("You chose: " + playerSelection);
-    console.log(playRound(playerSelection, computerSelection));
-    if (result === "You won!!!") {
-        userWins++;
-    } else if (result === "You lost! :(") {
-        computerWins++;
-    }
-    console.log("Round 5:");
-    playerSelection = getUserChoice();
-    computerSelection = getComputerChoice();
-    result = playRound(playerSelection, computerSelection);
-    console.log("Computer chose: " + computerSelection);
-    console.log("You chose: " + playerSelection);
-    console.log(playRound(playerSelection, computerSelection));
-    if (result === "You won!!!") {
-        userWins++;
-    } else if (result === "You lost! :(") {
-        computerWins++;
-    }
+   
 }
 
 playGame();
