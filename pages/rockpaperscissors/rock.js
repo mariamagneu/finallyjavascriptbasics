@@ -1,12 +1,8 @@
-/* 
-get computer choice (random) - create a function
-get user choice (prompt) make small case
-write function that plays single round (parameters playerSelection & Computer Selection)
-return messages like you won you lost its a tie
-test function with console.log(playRound(playerSelection, computerSelection));
-write new function playGame and nest playRound inside of it. user OR statements or Loop. 
-console.log results of each round and the winner at the end.*/ 
 
+document.addEventListener("DOMContentLoaded", function() {
+
+
+    console.log("Script executed")
 let choices = ["rock", "paper", "scissors"];
 let randomIndex;
 const winningCombos = {
@@ -17,17 +13,6 @@ const winningCombos = {
 let userWins = 0;
 let computerWins = 0;
 
-
-const rockBtn = document.createElement("button")
-const scissorsBtn = document.createElement("button")
-const paperBtn = document.createElement("button")
-
-
-const newDiv = document.createElement("div");
-newDiv.style.backgroundColor = 'pink';
-newDiv.style.border = 'solid thin black';
-newDiv.classList.add('container');
-document.body.appendChild(newDiv);
 
 
 function playGame() {
@@ -80,3 +65,34 @@ if (userWins === computerWins) {
 
 console.log (userWins)
 console.log (computerWins)
+
+const rockBtn = document.createElement("button");
+rockBtn.textContent = "Rock";
+document.body.appendChild(rockBtn);
+
+const scissorsBtn = document.createElement("button");
+scissorsBtn.textContent = "Scissors";
+document.body.appendChild(scissorsBtn);
+
+const paperBtn = document.createElement("button");
+document.body.appendChild(paperBtn);
+paperBtn.textContent = "Paper";
+
+
+
+rockBtn.addEventListener("click", function() {
+    playerSelection = "rock";
+    playRound();
+});
+
+scissorsBtn.addEventListener("click", function() {
+    playerSelection = "scissors";
+    playRound();
+});
+
+paperBtn.addEventListener("click", function() {
+    playerSelection = "paper";
+    playRound();
+});
+
+});
