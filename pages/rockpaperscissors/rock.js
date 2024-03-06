@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function() {
-    console.log("Script executed");
 
     let choices = ["rock", "paper", "scissors"];
     let randomIndex;
@@ -12,10 +11,27 @@ document.addEventListener("DOMContentLoaded", function() {
     let computerWins = 0;
 
     const rpsOutput = document.createElement("div");
-    const cptrSelection = document.createElement("p")
-    const usrSelection = document.createElement("p")
-    const rpsRoundResult = document.createElement("p")
-    const rpsRoundResult = document.createElement("p")
+    document.body.appendChild(rpsOutput);
+
+
+
+    let cptrSelection = document.createElement("p");
+    rpsOutput.appendChild(cptrSelection);
+
+    let usrSelection = document.createElement("p");
+    rpsOutput.appendChild(usrSelection);
+
+    let rpsRoundResult = document.createElement("p");
+    rpsOutput.appendChild(rpsRoundResult);
+
+    let rpsGameResult = document.createElement("p");
+    rpsOutput.appendChild(cptrSelection);
+
+    let usrWins = document.createElement ("p");
+    rpsOutput.appendChild(usrWins);
+
+    let cptrWins = document.createElement ("p");
+    rpsOutput.appendChild(cptrWins);
 
 
 
@@ -64,14 +80,14 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         }
 
-        console.log("Round 1:");
+        roundCount.textContent = "Round 1:";
         let playerSelection = getUserChoice;
         let computerSelection = getComputerChoice();
         let result = playRound(playerSelection, computerSelection);
 
-        console.log("Computer chose: " + computerSelection);
-        console.log("You chose: " + playerSelection);
-        console.log(result);
+        cptrSelection.textContent = "Computer chose: " + computerSelection;
+        usrSelection.textContent = "You chose: " + playerSelection;
+        rpsRoundResult.textContent = result ;
         if (result === "You won!!!") {
             userWins++;
         } else if (result === "You lost! :(") {
@@ -79,11 +95,11 @@ document.addEventListener("DOMContentLoaded", function() {
         }
        
         if (userWins === computerWins) {
-            console.log("It's a tie.");
+            rpsGameResult = "It's a tie.";
         } else if (userWins > computerWins) {
-            console.log("YOU MADE IT! YOU WON THE WHOLE GAME");
+            rpsGameResult = "YOU MADE IT! YOU WON THE WHOLE GAME";
         } else {
-            console.log("Try again. I believe in you!");
+            rpsGameResult = "Try again. I believe in you!";
         }
 
         console.log("User Wins: " + userWins);
