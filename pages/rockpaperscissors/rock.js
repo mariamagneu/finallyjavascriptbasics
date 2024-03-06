@@ -11,6 +11,15 @@ document.addEventListener("DOMContentLoaded", function() {
     let userWins = 0;
     let computerWins = 0;
 
+    const rpsOutput = document.createElement("div");
+    const cptrSelection = document.createElement("p")
+    const usrSelection = document.createElement("p")
+    const rpsRoundResult = document.createElement("p")
+    const rpsRoundResult = document.createElement("p")
+
+
+
+
     const rockBtn = document.createElement("button");
     rockBtn.textContent = "Rock";
     document.body.appendChild(rockBtn);
@@ -80,4 +89,6 @@ document.addEventListener("DOMContentLoaded", function() {
         console.log("User Wins: " + userWins);
         console.log("Computer Wins: " + computerWins);
     }
+
+    const results = document.createElement("div");
 });
