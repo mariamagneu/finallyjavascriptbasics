@@ -70,6 +70,12 @@ document.addEventListener("DOMContentLoaded", function() {
             randomIndex = Math.floor(Math.random() * choices.length);
             return choices[randomIndex];
         }
+        for (let i = 1; i <= 5; i++) {
+            const roundCount = "Round " + i + ":";
+            let playerSelection = getUserChoice;
+            let computerSelection = getComputerChoice();
+            let result = playRound(playerSelection, computerSelection);
+        }
         function playRound(playerSelection, computerSelection) {
             if (playerSelection === computerSelection) {
                 return "It's a tie. Nobody wins"; 
@@ -93,7 +99,6 @@ document.addEventListener("DOMContentLoaded", function() {
         } else if (result === "You lost! :(") {
             computerWins++;
         }
-       
         if (userWins === computerWins) {
             rpsGameResult = "It's a tie.";
         } else if (userWins > computerWins) {
