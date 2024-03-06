@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function() {
-
     let choices = ["rock", "paper", "scissors"];
     let randomIndex;
     const winningCombos = {
@@ -12,8 +11,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
     const rpsOutput = document.createElement("div");
     document.body.appendChild(rpsOutput);
-
-
 
     let cptrSelection = document.createElement("p");
     rpsOutput.appendChild(cptrSelection);
@@ -33,8 +30,8 @@ document.addEventListener("DOMContentLoaded", function() {
     let cptrWins = document.createElement ("p");
     rpsOutput.appendChild(cptrWins);
 
-
-
+    let roundCount = document.createElement("p");
+    rpsOutput.appendChild(roundCount);
 
     const rockBtn = document.createElement("button");
     rockBtn.textContent = "Rock";
@@ -55,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function() {
         playGame();
     });
 
-    scissorsBtn.addEventListener("click", function() {
+ scissorsBtn.addEventListener("click", function() {
         getUserChoice = "scissors";
         playGame();
     });
@@ -69,12 +66,6 @@ document.addEventListener("DOMContentLoaded", function() {
         function getComputerChoice() {
             randomIndex = Math.floor(Math.random() * choices.length);
             return choices[randomIndex];
-        }
-        for (let i = 1; i <= 5; i++) {
-            const roundCount = "Round " + i + ":";
-            let playerSelection = getUserChoice;
-            let computerSelection = getComputerChoice();
-            let result = playRound(playerSelection, computerSelection);
         }
         function playRound(playerSelection, computerSelection) {
             if (playerSelection === computerSelection) {
@@ -99,17 +90,15 @@ document.addEventListener("DOMContentLoaded", function() {
         } else if (result === "You lost! :(") {
             computerWins++;
         }
+
         if (userWins === computerWins) {
             rpsGameResult = "It's a tie.";
         } else if (userWins > computerWins) {
             rpsGameResult = "YOU MADE IT! YOU WON THE WHOLE GAME";
         } else {
-            rpsGameResult = "Try again. I believe in you!";
         }
 
         console.log("User Wins: " + userWins);
         console.log("Computer Wins: " + computerWins);
     }
-
-    const results = document.createElement("div");
 });
