@@ -98,7 +98,7 @@ document.addEventListener("DOMContentLoaded", function() {
         } else {
         }
 
-        console.log("User Wins: " + userWins);
-        console.log("Computer Wins: " + computerWins);
+        usrWins.textContent ="User Wins: " + userWins;
+        cptrWins.textContent = "Computer Wins: " + computerWins;
     }
 });
