@@ -30,9 +30,6 @@ document.addEventListener("DOMContentLoaded", function() {
     let cptrWins = document.createElement ("p");
     rpsOutput.appendChild(cptrWins);
 
-    let roundCount = document.createElement("p");
-    rpsOutput.appendChild(roundCount);
-
     const rockBtn = document.createElement("button");
     rockBtn.textContent = "Rock";
     document.body.appendChild(rockBtn);
