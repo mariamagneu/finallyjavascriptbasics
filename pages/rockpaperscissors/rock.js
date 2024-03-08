@@ -21,8 +21,7 @@ document.addEventListener("DOMContentLoaded", function() {
     let rpsRoundResult = document.createElement("p");
     rpsOutput.appendChild(rpsRoundResult);
 
-    let rpsGameResult = document.cr
-    eateElement("p");
+    let rpsGameResult = document.createElement("p");
     rpsOutput.appendChild(cptrSelection);
 
     let usrWins = document.createElement ("p");
@@ -30,46 +29,39 @@ document.addEventListener("DOMContentLoaded", function() {
 
     let cptrWins = document.createElement ("p");
     rpsOutput.appendChild(cptrWins);
-   
+
     const rockBtn = document.createElement("button");
     rockBtn.textContent = "Rock";
-    rpsOutput.appendChild(rockBtn);
+    document.body.appendChild(rockBtn);
 
     const scissorsBtn = document.createElement("button");
     scissorsBtn.textContent = "Scissors";
-    rpsOutput.appendChild(scissorsBtn);
+    document.body.appendChild(scissorsBtn);
 
     const paperBtn = document.createElement("button");
     paperBtn.textContent = "Paper";
-    rpsOutput.appendChild(paperBtn);
+    document.body.appendChild(paperBtn);
 
     let getUserChoice = "";
 
     rockBtn.addEventListener("click", function() {
         getUserChoice = "rock";
-        if (userWins >= 5 && computerWins >= 5) {
-            playGame();
-        } else {
+        playGame();
         winEndGame();
-    }
-});
+    });
 
  scissorsBtn.addEventListener("click", function() {
         getUserChoice = "scissors";
-        if (userWins >= 5 && computerWins >= 5) {
-            playGame();
-        } else {
+        playGame();
         winEndGame();
-    }
+
     });
 
     paperBtn.addEventListener("click", function() {
         getUserChoice = "paper";
-        if (userWins >= 5 && computerWins >= 5) {
-            playGame();
-        } else {
+        playGame();
         winEndGame();
-    }
+
     });
 
     function playGame() {
