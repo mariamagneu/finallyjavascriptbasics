@@ -21,7 +21,8 @@ document.addEventListener("DOMContentLoaded", function() {
     let rpsRoundResult = document.createElement("p");
     rpsOutput.appendChild(rpsRoundResult);
 
-    let rpsGameResult = document.createElement("p");
+    let rpsGameResult = document.cr
+    eateElement("p");
     rpsOutput.appendChild(cptrSelection);
 
     let usrWins = document.createElement ("p");
