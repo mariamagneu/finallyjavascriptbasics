@@ -29,39 +29,46 @@ document.addEventListener("DOMContentLoaded", function() {
 
     let cptrWins = document.createElement ("p");
     rpsOutput.appendChild(cptrWins);
-
+   
     const rockBtn = document.createElement("button");
     rockBtn.textContent = "Rock";
-    document.body.appendChild(rockBtn);
+    rpsOutput.appendChild(rockBtn);
 
     const scissorsBtn = document.createElement("button");
     scissorsBtn.textContent = "Scissors";
-    document.body.appendChild(scissorsBtn);
+    rpsOutput.appendChild(scissorsBtn);
 
     const paperBtn = document.createElement("button");
     paperBtn.textContent = "Paper";
-    document.body.appendChild(paperBtn);
+    rpsOutput.appendChild(paperBtn);
 
     let getUserChoice = "";
 
     rockBtn.addEventListener("click", function() {
         getUserChoice = "rock";
-        playGame();
+        if (userWins >= 5 && computerWins >= 5) {
+            playGame();
+        } else {
         winEndGame();
-    });
+    }
+});
 
  scissorsBtn.addEventListener("click", function() {
         getUserChoice = "scissors";
-        playGame();
+        if (userWins >= 5 && computerWins >= 5) {
+            playGame();
+        } else {
         winEndGame();
-
+    }
     });
 
     paperBtn.addEventListener("click", function() {
         getUserChoice = "paper";
-        playGame();
+        if (userWins >= 5 && computerWins >= 5) {
+            playGame();
+        } else {
         winEndGame();
-
+    }
     });
 
     function playGame() {
