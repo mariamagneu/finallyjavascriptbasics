@@ -16,25 +16,34 @@
 
  function isEmpty(obj) {
     for (let key in obj) {
+        alert(key);
         return false
     } 
     return true;
 
  }
 
- let sum = 0;
-
- let salaries = {
-  John: 100,
-  Ann: 160,
-  Pete: 130
+let menu = {
+    width: 200,
+    heigth: 300,
+    title: "My menu",
 }
 
-for (let key in salaries) {
-    sum += salaries[key];
+
+
+function multiplyNumeric(menu) {
+    var isNumber = function isNumber(value) 
+{
+   return typeof value === 'number' && isFinite(value);
+}
+ for (let key in menu) {
+    if (isNumber(key) === 'number')
+    key * 2
+ }
 }
 
-alert(sum);
+alert(menu);
+
     </script>
 </body>
 </html>
