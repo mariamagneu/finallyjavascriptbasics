@@ -1,22 +1,23 @@
 <!DOCTYPE html>
 <html lang="en-US">
-  <head>
-    <meta charset="utf-8"/>
+
+<head>
+    <meta charset="utf-8" />
     <title>Object basics: Task 2</title>
     <style>
-      p {
-        color: purple;
-        margin: 0.5em 0;
-      }
+        p {
+            color: purple;
+            margin: 0.5em 0;
+        }
 
-      * {
-        box-sizing: border-box;
-      }
+        * {
+            box-sizing: border-box;
+        }
     </style>
-    <link rel="stylesheet" href="../styles.css" />
-  </head>
 
-  <body>
+</head>
+
+<body>
 
     <section class="preview">
 
@@ -24,19 +25,34 @@
 
     </section>
 
-  </body>
-  <script>
+</body>
+<script>
     let bandInfo;
 
     // Add your code here
-
-
+    bandInfo = {
+    name: "invented Band",
+    nationality: "brasilian",
+    members: 4,
+    formed: 2000,
+    split: 2010,
+    albums: [
+        {
+        name: "first Album",
+        released: 2000,
+        },
+        {
+        name: "second Album",
+        released: 2003,
+        }
+    ],
+    }
     // Don't edit the code below here!
 
     const section = document.querySelector('section');
     let para1 = document.createElement('p');
     para1.textContent = bandInfo;
     section.appendChild(para1);
-  </script>
+</script>
 
 </html>
