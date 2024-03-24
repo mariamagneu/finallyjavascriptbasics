@@ -30,23 +30,27 @@
     let bandInfo;
 
     // Add your code here
-    bandInfo = {
-    name: "invented Band",
-    nationality: "brasilian",
-    members: 4,
-    formed: 2000,
-    split: 2010,
-    albums: [
-        {
-        name: "first Album",
-        released: 2000,
-        },
-        {
-        name: "second Album",
-        released: 2003,
-        }
-    ],
-    }
+    function createCat(name, breed) {
+  const obj = {};
+  obj.name = name;
+  obj.breed = breed;
+  obj.greeting = function () {
+   console.log(`Hello, said ${ this.name } the ${ this.breed }.`);
+      }
+return obj;
+}
+
+const bertie = createCat("Bertie", "Cymric");
+
+const elfie = createCat("Elfie", "Aphrodite Giant");
+
+bertie.greeting();
+elfie.greeting();
+
+
+
+
+
     // Don't edit the code below here!
 
     const section = document.querySelector('section');
