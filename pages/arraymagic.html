@@ -9,14 +9,11 @@
 
 <body>
     <script>
-        /* create an array with numbers in it
-        create a function 
-        create a variable for the sum
-        that tests if a number is even, if it is
-        it multiplicates by 3
-        and then sums all of them */
+       
         function sumOfTripledEvens(array) {
-            let sum = 0;
+            let evenNumber = array.filter((num) => num % 2 === 0);
+            let tripleEvenNumber = array.map((num) => num * 3)
+            let sum = tripleEvenNumber.reduce((?????, ????)) 
             for (let i = 0; i < array.length; i++) {
                 // Step 1: If the element is an even number
                 if (array[i] % 2 === 0) {
