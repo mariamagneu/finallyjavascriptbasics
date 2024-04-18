@@ -9,13 +9,26 @@
 
 <body>
     <script>
+            let salaries = {
+                John: 100,
+                Ann: 160,
+                Pete: 130
+            }
+
+            let summedSalary = 0;
+
+            function sum(obj) {
+                for (let key in obj) {
+                    summedSalary += obj[key];
+                }
+                return summedSalary;
+            }
         
-function isEmpty(obj){
-  for (prop in obj){
-    return false;
-    } 
-      return true
-    }
+        alert(sum(salaries))
+        alert(sum(salaries))
+alert(sum(salaries))
+
+        
     </script>
 </body>
 
