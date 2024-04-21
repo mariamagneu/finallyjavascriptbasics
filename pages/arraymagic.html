@@ -34,8 +34,13 @@
                 name: "fourth one",
                 released: 2022
             },
-            ]
+            ],
+            bandInfo() {
+                return (`This Band is called ${this.name} and exists since ${this.formed}. It has published four albums - specifically ${this.albums[0].name}, ${this.albums[1].name},${this.albums[2].name}, and ${this.albums[3].name}. They split in ${this.split} due to serious problems.`)
             }
+        }
+        console.log(band.bandInfo())
+
  </script> 
 
   </body>
