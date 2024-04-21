@@ -10,44 +10,34 @@
     <p>This example requires you to enter commands in your browser's JavaScript console (see <a href="https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools">What are browser developer tools</a> for more information).</p>
     
     <script>
-        const person = {
-                name: {
-                    first: "Bob",
-                    last: "Smith"
-                },
-                age: 32,
-                bio() {
-                    console.log(`${this.name.first} ${this.name.last} is ${this.age} years old.`);
-                },
-                introduceSelf() {
-                },
-            };
-
-            person.age = 45;
-            person["name"]["last"] = "Cratchit";
-            person["eyes"] = "hazel";
-            person.farewell = function () {
-                console.log("Bye everyobedy")
+        band = {
+            name: "the name of a band",
+            nationality: "everything but not german",
+            genre: "everything but schlager",
+            members: 5,
+            formed: 2005,
+            split: 2024,
+            albums: [
+            {
+                name: "first one",
+                released: 2005,
+            },
+            {
+                name: "second one",
+                released: 2015,
+            },
+            {
+                name: "third one",
+                released: 2018,
+            },
+            {
+                name: "fourth one",
+                released: 2022
+            },
+            ]
             }
+ </script> 
 
-            const myDataName = "height";
-            const myDataValue = "1,75m";
-            person[myDataName] = myDataValue;
-
-            function Person(name) {
-                this.name = name;
-                this.introduceSelf = function () {
-                    console.log(`Hi! I'm ${this.name}.`);
-                };
-            }
-
-            const salva = new Person("Salva");
-            salva.introduceSelf();
-
-            const frankie = new Person ("Frankie");
-            frankie.introduceSelf();
-
-        </script>
   </body>
 
 </html>
